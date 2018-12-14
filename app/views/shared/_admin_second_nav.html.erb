@@ -1,0 +1,35 @@
+<div class="head-second-nav">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <%= link_to admin_dashboards_path, class: "nav-link #{active? admin_dashboards_path }" do %>
+          <i class="fas fa-home"></i> Home
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to admin_traivans_path, class: "nav-link  #{active? admin_traivans_path }" do %>
+          <i class="far fa-user"></i> Admin
+        <% end %>
+      </li>
+
+       <li class="nav-item">
+        <%= link_to admin_products_path, class: "nav-link #{active? admin_products_path}" do %>
+          <i class="fas fa-tram"></i> Products
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to '#', class: "nav-link " do %>
+          <i class="fas fa-cart-arrow-down"></i> Orders
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to '#', class: "nav-link " do %>
+          <i class="fas fa-cog"></i> Settings
+        <% end %>
+      </li>
+    </ul>
+  </div><!--container-->
+</div><!--head-second-nav-->

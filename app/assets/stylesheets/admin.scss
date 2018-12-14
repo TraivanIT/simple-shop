@@ -1,0 +1,86 @@
+@import "bootstrap";
+html, body {
+  background-color: #f6f8fa;
+  color: #676a6c;
+  height: 100%;
+}
+.header-top-area {
+  background:#00c292;
+
+}
+.header-top-area .logo-area{
+  padding: 8px 0px;
+  color: white;
+  font-size: 24px;
+  }
+
+.header-top-area .logo-area i {
+  font-size: 16px;
+  color: white;
+  
+}
+
+.header-top-area .logo-area a {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+.box{
+  border: 1px red dotted;
+}
+
+/* head-second-nav*/
+.head-second-nav{
+  margin-top: 30px;
+}
+
+.head-second-nav ul li a{
+  font-size: 14px;
+  color: #333333;
+  }
+
+.active {
+  background: #00c292 !important;
+  color: white !important;
+}
+
+.column-list-4 {
+  margin-top: 30px;
+}
+.column-list-4 .column-inner {
+  height: 90px;
+  text-align: center;
+  padding-top: 15px;
+
+}
+
+.column-list-4 .column-inner h2{
+  font-size: 18px;
+  color: #333333;
+}
+
+.column-list-4 .column-inner p{
+   font-size: 14px;
+   color: #333333;
+}
+.show-products {
+  margin-top: 30px;
+}
+
+.product-inner {
+  padding: 15px;
+}
+
+.traivan-inner {
+  padding: 15px;
+}
+  
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<div class="custom-file nested-fields">
+  <div>
+    <label class="custom-file-label" for="customFile">Choose file</label>
+    <%= f.file_field :image,  class: "custom-file-input" ,id: "customFile"%>
+  </div>
+  <div class="pt-2">
+    <%= link_to_remove_association 'Remove Photo', f , class: "btn btn-secondary btn-sm "%>
+  </div>
+</div>

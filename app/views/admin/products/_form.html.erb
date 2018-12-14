@@ -1,0 +1,44 @@
+<%= form_for [:admin ,@product] do |f|%>
+<div class="card-footer">
+  <div class="row">
+    <div class="col-md-4 card">
+      <h2>Add Photos</h2>
+      <div>
+        <%= f.fields_for :photos do |photo|%>
+          <%= render 'photo_fields', f: photo%>
+        <% end %>
+
+        <div class="pt-3">
+          <%= link_to_add_association 'Add Photo', f, :photos, class: "btn btn-secondary btn-sm"%>
+        </div>
+      </div>
+      
+    </div><!--end of col-md-4-->
+
+    <div class="col-md-8">
+      <div class="form-group">
+          <%= f.label :title%>
+          <%= f.text_field :title, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.label :price%>
+          <%= f.number_field :price, value: 1,class: "form-control"%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description%>
+          <%= f.text_area :description, rows: 5,class: "form-control"%>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+    </div>
+  </div>
+</div>
+
+<div class="card-footer">
+  <div class="btn-group " role="group" aria-label="Basic example">
+    <%= link_to 'CANCEL', admin_products_path, class: "btn btn-outline-secondary"%>
+    <%=f.submit 'SAVE PRODUCT', class: "btn btn-outline-secondary"%>
+  </div>
+</div>
+<% end%>

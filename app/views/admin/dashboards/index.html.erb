@@ -1,0 +1,89 @@
+  <%= render 'shared/column_list_4'%>
+  
+  <div class="show-products">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="product-inner bg-white">
+            <div class="float-left">Published Product</div>
+            <div class="float-right"><%= link_to 'New Product', new_admin_product_path, class: "text-success"%></div>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>title</th>
+                  <th>status</th>
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%@products_published.each do |product| %>
+                  <tr>
+                    <td><%= product.id%></td>
+                    <td><%= product.title%></td>
+                    <td class="text-success"><%= product.status%></td>
+                    <td ><%= link_to 'edit', edit_admin_product_path(product.id), class: "text-warning"%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <%= paginate @products_published, theme:  'twitter-bootstrap-4', pagination_class: "pagination-sm"%>
+          </div><!--product-inner-->
+        </div><!--col-lg-4 -->
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="product-inner bg-white">
+            <div class="float-left">Published Product</div>
+            <div class="float-right"><%= link_to 'New Product', new_admin_product_path, class: "text-success"%></div>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>title</th>
+                  <th>status</th>
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%@products_draft.each do |product| %>
+                  <tr>
+                    <td><%= product.id%></td>
+                    <td><%= product.title%></td>
+                    <td class="text-success"><%= product.status%></td>
+                    <td ><%= link_to 'edit', edit_admin_product_path(product.id), class: "text-warning"%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <%= paginate @products_published, theme:  'twitter-bootstrap-4', pagination_class: "pagination-sm"%>
+          </div><!--product-inner-->
+        </div><!--col-lg-4 -->
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="product-inner bg-white">
+            <div class="float-left">Published Product</div>
+            <div class="float-right"><%= link_to 'New Product', new_admin_product_path, class: "text-success"%></div>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>title</th>
+                  <th>status</th>
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%@products_published.each do |product| %>
+                  <tr>
+                    <td><%= product.id%></td>
+                    <td><%= product.title%></td>
+                    <td class="text-success"><%= product.status%></td>
+                    <td ><%= link_to 'edit', edit_admin_product_path(product.id), class: "text-warning"%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <%= paginate @products_published, theme:  'twitter-bootstrap-4', pagination_class: "pagination-sm"%>
+          </div><!--product-inner-->
+        </div><!--col-lg-4 -->
+      </div><!--row-->
+    </div><!--show-products-->

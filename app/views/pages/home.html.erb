@@ -1,0 +1,43 @@
+<br>
+<main role="main">
+  <div class="jumbotron">
+    <div class="col-sm-8 mx-auto">
+      <h1>Navbar examples</h1>
+      <p>This example is a quick exercise to illustrate how the navbar and its contents work. Some navbars extend the width of the viewport, others are confined within a <code>.container</code>. For positioning of navbars, checkout the <a href="../navbar-static/">top</a> and <a href="../navbar-fixed/">fixed top</a> examples.</p>
+      <p>At the smallest breakpoint, the collapse plugin is used to hide the links and show a menu button to toggle the collapsed content.</p>
+      <p>
+        <a class="btn btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+
+<section id="list-product">
+  <div class="jumbotron">
+    <h1>Products For Sale !!!</h1>
+    <div class="row">
+    <% @products.each do |product|%>
+      
+        <div class="col-md-3 mt-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. <%= product.title%></p>
+
+              <%= form_for(@order_item) do |f|%>
+              <%= f.hidden_field :product_id, value: product.id%>
+              <div class="input-group mb-2 mr-sm-2">
+                <%= f.text_field :quantity, value: 1, min: 1, class: "form-control"%>
+                <div class="input-group-prepend">
+                  <%= f.submit 'add to cart', class: "input-group-text" %>
+                </div>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      
+    <% end %>
+    </div>  
+  </div>
+</section>

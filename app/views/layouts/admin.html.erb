@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimpleShop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'shared/font_awsome' %>
+  </head>
+
+  <body>
+    <%= render 'shared/admin_header_top'%>
+    <%= render 'shared/alerts'%>
+    <%= render 'shared/admin_second_nav'%>
+    
+    <div class="container show-products">
+      <%= yield %>
+    </div>
+  
+    
+    
+
+  </body>
+</html>

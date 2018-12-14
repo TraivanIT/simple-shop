@@ -1,0 +1,2 @@
+module TraivanHelper
+end

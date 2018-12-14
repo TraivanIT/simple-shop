@@ -1,0 +1,19 @@
+<div class="traivan-inner bg-white">
+
+<h6 class="float-left"><b>Product Name: </b><span class="text-success"><%= @product.title %></span></h6>
+<div class="float-right">
+  <%= link_to 'back' , admin_products_path , class: "text-success"%>
+  <%= link_to 'edit' , edit_admin_product_path(@product.id) , class: "text-warning"%>
+  <%= link_to 'delete' , admin_product_path(@product.id) ,method: :delete, data: {confirm: 'Are you sure?'}, class: "text-danger"%>
+</div>
+
+<div class="clearfix"></div>
+
+<h6><b>Product Price: </b> <span class="text-success"><%= number_to_currency @product.price%></span></h6>
+<h6><b>Status:</b>  <span class="text-success"><%= @product.status%></span></h6>
+<h6>Photo of products: </h6>
+<hr>
+<%@product.photos.each do |photo|%>
+  <%= image_tag photo.image.url%>
+<% end %>
+</div>
