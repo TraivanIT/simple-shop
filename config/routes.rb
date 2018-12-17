@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
-
-  
-
- 
-
+  devise_for :users
+  resources :line_items
+  resources :carts
   resources :order_items
-  resource :carts, only: [:show]
+
   root to: 'pages#home'
   get '/login', to: "admin/sessions#new"
   get '/logout', to: "admin/sessions#destroy"

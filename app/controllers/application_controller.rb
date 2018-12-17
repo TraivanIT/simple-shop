@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   
 
   include ApplicationHelper #to use session
+  include CurrentCart
+  before_action :set_cart
 
  
 
